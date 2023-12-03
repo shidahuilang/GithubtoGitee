@@ -41,7 +41,7 @@ jobs:
         echo "KEEP_MININUM_RUNS=$KEEP_MININUM_RUNS" >> $GITHUB_ENV
         
     - name: Delete Older Workflow Runs
-      uses: Mattraks/delete-workflow-runs@main
+      uses: JuvenileQ/delete-workflow-runs@main
       with:
         token: ${{ secrets.REPO_TOKEN }}
         repository: ${{ github.repository }}
