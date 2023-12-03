@@ -25,10 +25,19 @@ jobs:
           - githubRepoName: shuyuan
             giteeRepoName: shuyuan
           - githubRepoName: QL-
-            giteeRepoName: QL-
+            giteeRepoName: qinglong
           - githubRepoName: pve
             giteeRepoName: pve
-           
+          - githubRepoName: QuantumultX
+            giteeRepoName: QuantumultX
+          - githubRepoName: common
+            giteeRepoName: common
+          - githubRepoName: SS-SSR-TG-iptables-bt
+            giteeRepoName: SS-SSR-TG-iptables-bt           
+          - githubRepoName: btpanel
+            giteeRepoName: btpanel
+          - githubRepoName: openwrt
+            giteeRepoName: openwrt           
     steps:
       - name: 获取提交哈希
         id: getHash
