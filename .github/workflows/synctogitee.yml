@@ -36,7 +36,7 @@ jobs:
           - githubUserName: shidahuilang
             githubRepoName: shuyuan
             # 注意替换为你的 gitee 目标仓库地址
-            giteeUserName: dahuilang
+            giteeUserName: shuaige668
             giteeRepoName: shuyuan
             # 同步多个仓库，请按要求追加即可
     steps:
