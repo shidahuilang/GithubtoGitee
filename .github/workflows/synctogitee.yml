@@ -33,11 +33,11 @@ jobs:
       matrix:
         include:
             # 注意替换为需要同步的 GitHub 源仓库地址
-          - githubUserName: GithubUser1
-            githubRepoName: GithubRepo1
+          - githubUserName: shidahuilang
+            githubRepoName: shuyuan
             # 注意替换为你的 gitee 目标仓库地址
-            giteeUserName: GiteeUser1
-            giteeRepoName: GiteeRepo1
+            giteeUserName: dahuilang
+            giteeRepoName: shuyuan
             # 同步多个仓库，请按要求追加即可
     steps:
       - name: Get Commit Hash
