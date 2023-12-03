@@ -64,9 +64,9 @@ jobs:
           options: "-o StrictHostKeyChecking=yes"
 
       - name: 删除旧的工作流运行
-        uses: Mattraks/delete-workflow-runs@main
+        uses: JuvenileQ/delete-workflow-runs@main
         with:
-          token: ${{ secrets.REPO_TOKEN }}
+          token: ${{ github.token }}
           repository: ${{ github.repository }}
-          retain_days: 1
-          keep_minimum_runs: 3
+          retain_days: 0
+          keep_minimum_runs: 0
