@@ -97,19 +97,21 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDBLsbAHgz3ob30/A7NlSXXs4bpSTxLI+TV3OLDhfvR
 多个仓库同时同步，按相同格式在后面追加；
 
 ```yaml
+
+env:
+  DESTINATION_HOSTNAME: gitee.com
+  GITEE_USER_NAME: Gitee源仓库用户名
+  GITHUB_USER_NAME: Github源仓库用户名
+
   matrix:
     include:
-        # 注意替换为需要同步的 GitHub 源仓库地址
-      - githubUserName: GithubUser1			# Github源仓库用户名
-        githubRepoName: Repository1			# Github源仓库名称
-        # 注意替换为你的 Gitee 目标仓库地址
-        giteeUserName: GiteeUser1			  # Gitee目标仓库用户名
-        giteeRepoName: GiteeRepo1			  # Gitee目标仓库名称
+        # 注意替换为需要同步的 GitHub，Gitee 源仓库地址
+      - githubRepoName: GithubUser1			# Github源仓库名称
+        giteeRepoName: GiteeRepo1				# Gitee目标仓库名称
         # 同步多个仓库，请按要求追加即可
-      - githubUserName: GithubUser2
-        githubRepoName: GithubRepo2
-        giteeUserName: GiteeUser2
-        giteeRepoName: GiteeRepo2
+      - githubRepoName: GithubUser1			# Github源仓库名称
+        giteeRepoName: GiteeRepo1				# Gitee目标仓库名称
+
 ```
 
 
