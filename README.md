@@ -107,7 +107,7 @@ env:
     include:
         # 注意替换为需要同步的 GitHub，Gitee 源仓库地址
       - githubRepoName: GithubUser1			# Github源仓库名称
-        giteeRepoName: GiteeRepo1		# Gitee目标仓库名称
+        giteeRepoName: GiteeRepo1		  # Gitee目标仓库名称
         # 同步多个仓库，请按要求追加即可
       - githubRepoName: GithubUser1			# Github源仓库名称
         giteeRepoName: GiteeRepo1				# Gitee目标仓库名称
