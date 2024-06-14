@@ -52,7 +52,7 @@ jobs:
 
       - name: 比较提交哈希
         id: compareHash
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: .commitHash
           key: ${{ env.GITHUB_USER_NAME }}-${{ steps.getHash.outputs.commitHash }}
