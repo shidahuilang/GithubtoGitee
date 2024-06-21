@@ -45,9 +45,9 @@ jobs:
       - name: 获取提交哈希
         id: getHash
         run: |
-          githubRepoDir=$GITHUB_USER_NAME-${{ matrix.githubRepoName }}
+          githubRepoDir=$GIT_USER_NAME-${{ matrix.githubRepoName }}
           echo "githubRepoDir=$githubRepoDir" >> $GITHUB_ENV
-          git clone --depth 1 https://github.com/$GITHUB_USER_NAME/${{ matrix.githubRepoName }} $githubRepoDir
+          git clone --depth 1 https://github.com/$GIT_USER_NAME/${{ matrix.githubRepoName }} $githubRepoDir
           cd $githubRepoDir
           echo "commitHash=$(git rev-parse HEAD)" >> $GITHUB_OUTPUT
           rm -rf $githubRepoDir
@@ -57,7 +57,7 @@ jobs:
         uses: actions/cache@v4
         with:
           path: .commitHash
-          key: ${{ env.GITHUB_USER_NAME }}-${{ steps.getHash.outputs.commitHash }}
+          key: ${{ env.GIT_USER_NAME }}-${{ steps.getHash.outputs.commitHash }}
 
       - name: 生成提交哈希
         if: steps.compareHash.outputs.cache-hit != 'true'
@@ -71,7 +71,7 @@ jobs:
         env:
           SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
         with:
-          source-repo: "git@github.com:${{ env.GITHUB_USER_NAME }}/${{ matrix.githubRepoName }}.git"
+          source-repo: "git@github.com:${{ env.GIT_USER_NAME }}/${{ matrix.githubRepoName }}.git"
           destination-repo: "git@${{ env.DESTINATION_HOSTNAME }}:${{ env.GITEE_USER_NAME }}/${{ matrix.giteeRepoName }}.git"
          # options: "-o StrictHostKeyChecking=yes"
 
