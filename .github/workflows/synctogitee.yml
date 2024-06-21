@@ -38,8 +38,8 @@ jobs:
             giteeRepoName: btpanel
           - githubRepoName: openwrt
             giteeRepoName: openwrt
-          - githubRepoName: facefusion
-            giteeRepoName: facefusion
+          #- githubRepoName: facefusion
+          #  giteeRepoName: facefusion
             
     steps:
       - name: 获取提交哈希
