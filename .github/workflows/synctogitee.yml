@@ -11,8 +11,8 @@ on:
 
 env:
   DESTINATION_HOSTNAME: gitee.com
-  GITEE_USER_NAME: shuaige668
-  GITHUB_USER_NAME: shidahuilang
+  GITEE_USER_NAME: ${{ secrets.GITEE_USER_NAME }}
+  GIT_USER_NAME: ${{ secrets.GIT_USER_NAME }}
 
 jobs:
   git-mirror:
